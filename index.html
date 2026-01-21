@@ -7,8 +7,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #000C66; /* Seu azul marinho */
-            --accent: #00B0FF;  /* Seu azul claro */
+            --primary: #000C66;
+            --accent: #00B0FF;
             --bg: #f4f7f9;
             --text: #333;
         }
@@ -75,20 +75,24 @@
 
         .consentimento label { font-size: 13px; color: #444; line-height: 1.4; }
 
-        button {
+        .btn-finalizar {
             width: 100%;
             background-color: var(--primary);
             color: white;
-            padding: 15px;
+            padding: 18px;
             border: none;
             border-radius: 8px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
-        button:hover { background-color: var(--accent); }
+        .btn-finalizar:hover { background-color: var(--accent); }
 
         .footer-brand {
             text-align: center;
@@ -109,8 +113,6 @@
     
     <form action="https://formspree.io/f/mqeenwqq" method="POST">
         
-        <input type="hidden" name="_next" value="https://wa.me/5574981059128?text=Olá! Acabei de enviar os dados pelo formulário. Seguem as fotos para a logo e fachada.">
-
         <fieldset>
             <legend><i class="fas fa-hospital"></i> Identificação</legend>
             <input type="text" name="nome_clinica" placeholder="Nome da Clínica" required>
@@ -124,25 +126,22 @@
             <input type="tel" name="whatsapp" placeholder="WhatsApp / Telefone" required>
         </fieldset>
 
-        <fieldset style="background-color: #f8f9fa;">
-    <legend><i class="fas fa-image"></i> IDENTIDADE VISUAL</legend>
-    <p style="font-size: 0.9em; color: #444; margin: 0; text-align: center;">
-        As fotos da clínica (Logo e Fachada) serão solicitadas <b>via WhatsApp</b> imediatamente após você clicar no botão abaixo.
-    </p>
-</fieldset>
-
-<div style="margin-top: 20px;">
-    <button type="submit" style="background-color: #000C66; color: white; padding: 15px; width: 100%; border-radius: 8px; font-weight: bold; font-size: 16px;">
-        FINALIZAR E ENVIAR FOTOS <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
-    </button>
-</div>
+        <fieldset style="background-color: #f8f9fa; border-style: dashed;">
+            <legend><i class="fas fa-image"></i> Identidade Visual</legend>
+            <p style="font-size: 0.9em; color: #444; margin: 0; text-align: center;">
+                <i class="fab fa-whatsapp" style="color: #25D366;"></i> 
+                As fotos da clínica (Logo e Fachada) serão solicitadas <b>via WhatsApp</b> imediatamente após você clicar no botão abaixo.
+            </p>
+        </fieldset>
 
         <div class="consentimento">
             <input type="checkbox" id="permissao" name="permissao_email" required>
             <label for="permissao">Autorizo a criação de um e-mail técnico (servidor@newscreen) para envio automático de relatórios e notificações do sistema.</label>
         </div>
 
-        <button type="submit">Finalizar e Enviar Dados</button>
+        <button type="submit" class="btn-finalizar">
+            FINALIZAR E ENVIAR DADOS <i class="fas fa-arrow-right"></i>
+        </button>
     </form>
     
     <div class="footer-brand">
@@ -152,10 +151,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
