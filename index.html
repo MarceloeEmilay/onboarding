@@ -124,27 +124,15 @@
 
         <fieldset>
     <legend><i class="fas fa-image"></i> IDENTIDADE VISUAL</legend>
-    <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">
-        Clique abaixo para anexar até 4 fotos (Logo, Fachada, etc).
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px;">
+        Para garantir a melhor qualidade, após clicar em <b>FINALIZAR</b> abaixo, envie sua logo e as fotos da clínica diretamente para o nosso suporte:
     </p>
-    <a id="link-tally" href="https://tally.so/r/5BZj0M" target="_blank" 
-       style="display: inline-block; background-color: #000080; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; width: 100%; text-align: center;">
-        Anexar Fotos da Clínica
+    <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Acabei de preencher o formulário de onboarding. Seguem as fotos da minha clínica." 
+       target="_blank" 
+       style="display: flex; align-items: center; justify-content: center; background-color: #25D366; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; width: 100%;">
+        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Enviar Fotos pelo WhatsApp
     </a>
         </fieldset>
-
-<script>
-    // Captura o campo onde o cliente digita o nome da clínica
-    const inputNome = document.querySelector('input[placeholder="Nome da Clínica"]');
-    const botaoTally = document.getElementById('link-tally');
-
-    // Toda vez que o cliente digitar, atualizamos o link do Tally
-    inputNome.addEventListener('input', function() {
-        const nomeDigitado = encodeURIComponent(this.value);
-        // O termo "Clinica" deve ser igual ao nome do campo no Tally
-        botaoTally.href = `https://tally.so/r/5BZj0M?Clinica=${nomeDigitado}`;
-    });
-</script>
 
         <div class="consentimento">
             <input type="checkbox" id="permissao" name="permissao_email" required>
@@ -162,3 +150,4 @@
 </body>
 
 </html>
+
