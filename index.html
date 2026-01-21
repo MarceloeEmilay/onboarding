@@ -123,10 +123,28 @@
         </fieldset>
 
         <fieldset>
-            <legend><i class="fas fa-image"></i> Identidade Visual</legend>
-            <label style="font-size: 12px; color: #666;">Anexe sua Logomarca (PNG ou JPG):</label>
-            <input type="file" name="logomarca" accept="image/*">
+    <legend><i class="fas fa-image"></i> IDENTIDADE VISUAL</legend>
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">
+        Clique abaixo para anexar até 4 fotos (Logo, Fachada, etc).
+    </p>
+    <a id="link-tally" href="https://tally.so/r/5BZj0M" target="_blank" 
+       style="display: inline-block; background-color: #000080; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; width: 100%; text-align: center;">
+        Anexar Fotos da Clínica
+    </a>
         </fieldset>
+
+<script>
+    // Captura o campo onde o cliente digita o nome da clínica
+    const inputNome = document.querySelector('input[placeholder="Nome da Clínica"]');
+    const botaoTally = document.getElementById('link-tally');
+
+    // Toda vez que o cliente digitar, atualizamos o link do Tally
+    inputNome.addEventListener('input', function() {
+        const nomeDigitado = encodeURIComponent(this.value);
+        // O termo "Clinica" deve ser igual ao nome do campo no Tally
+        botaoTally.href = `https://tally.so/r/5BZj0M?Clinica=${nomeDigitado}`;
+    });
+</script>
 
         <div class="consentimento">
             <input type="checkbox" id="permissao" name="permissao_email" required>
@@ -142,4 +160,5 @@
 </div>
 
 </body>
+
 </html>
