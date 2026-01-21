@@ -54,7 +54,7 @@
             letter-spacing: 1px;
         }
 
-        input[type="text"], input[type="email"], input[type="tel"], input[type="file"] {
+        input[type="text"], input[type="email"], input[type="tel"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
@@ -107,8 +107,10 @@
         <p>Preencha os dados abaixo para iniciarmos a instalação.</p>
     </div>
     
-    <form action="https://formspree.io/f/mqeenwqq" method="POST" enctype="multipart/form-data">
+    <form action="https://formspree.io/f/mqeenwqq" method="POST">
         
+        <input type="hidden" name="_next" value="https://wa.me/5574981059128?text=Olá! Acabei de enviar os dados pelo formulário. Seguem as fotos para a logo e fachada.">
+
         <fieldset>
             <legend><i class="fas fa-hospital"></i> Identificação</legend>
             <input type="text" name="nome_clinica" placeholder="Nome da Clínica" required>
@@ -122,16 +124,12 @@
             <input type="tel" name="whatsapp" placeholder="WhatsApp / Telefone" required>
         </fieldset>
 
-        <fieldset>
-    <legend><i class="fas fa-image"></i> IDENTIDADE VISUAL</legend>
-    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px;">
-        Para garantir a melhor qualidade, após clicar em <b>FINALIZAR</b> abaixo, envie sua logo e as fotos da clínica diretamente para o nosso suporte:
-    </p>
-    <a href="https://wa.me/5574981059128?text=Olá! Acabei de preencher o formulário de onboarding. Seguem as fotos da minha clínica." 
-       target="_blank" 
-       style="display: flex; align-items: center; justify-content: center; background-color: #25D366; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; width: 100%;">
-        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Enviar Fotos pelo WhatsApp
-    </a>
+        <fieldset style="background-color: #f9f9f9; border-style: dashed;">
+            <legend><i class="fas fa-image"></i> Identidade Visual</legend>
+            <p style="font-size: 0.9em; color: #444; margin: 0;">
+                <i class="fab fa-whatsapp" style="color: #25D366;"></i> 
+                <b>Nota:</b> Após clicar no botão enviar abaixo, você será levado ao nosso WhatsApp para nos enviar a <b>Logo</b> e as <b>Fotos da Fachada</b>.
+            </p>
         </fieldset>
 
         <div class="consentimento">
@@ -143,12 +141,14 @@
     </form>
     
     <div class="footer-brand">
-        &copy; 2024 Sistemas New Screen - Tecnologia em Saúde
+        &copy; 2026 Sistemas New Screen - Tecnologia em Saúde
     </div>
 </div>
 
 </body>
-
 </html>
+
+
+
 
 
